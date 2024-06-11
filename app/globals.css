@@ -1,33 +1,188 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #0f0c29 , #302b63, #24243e);
+
+}
+
+.inbox{
+  border-radius: 10px;
+  width: 400px;
+  background: linear-gradient(90deg, #74ebd5 , #ACB6E5);
+  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.4);
+
+}
+
+@media only screen and (max-width: 431px){
+  .inbox{
+    width: 350px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.inbox-content{
+  margin: 10px 15px;
+}
+
+.password-input{
+  width: 100%;
+  padding: 15px 0 0 0;
+  font-size: 18px;
+}
+
+.top-section{
+  display: flex;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(79, 205, 209);
+  width: 50px;
+  margin-left: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.range{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px 0;
+}
+.range-text{
+  font-weight: 250;
+}
+
+.range-number{
+  padding: 5px 0 5px 0;
+  font-size: 15px;
+  width: 70px;
+}
+
+.check-boxes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox{
+  height: 30px;
+  width: 20px;
+}
+
+
+.generator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.gen-btn{
+  width: 100%;
+  padding: 15px 0;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.notifications-length{
+  width: 330px;
+  height: 50px;
+  background-color: #ffcc00;
+  position: fixed;
+  right: -100%;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.6s;
+  border-radius: 10px;
+}
+
+.active-notifications-length{
+  right: 0%;
+}
+
+.notifications-checkbox{
+  width: 330px;
+  height: 50px;
+  background-color: #ffcc00;
+  position: fixed;
+  right: -100%;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.6s;
+  border-radius: 10px;
+}
+
+.active-notifications-checkbox{
+  right: 0%;
+}
+
+.warning-icon{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(237, 60, 60);
+  border-radius: 50px;
+  padding-bottom: 3px;
+  padding-left: 1px;
+  margin-right: 10px;
+  gap: 10px;
+}
+
+.notifications-copied{
+  width: 200px;
+  height: 50px;
+  background-color: #0ef056;
+  position: fixed;
+  right: -100%;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.6s;
+  border-radius: 10px;
+}
+
+.active-notifications-copied{
+  right: 0%;
+}
+
+.copied-icon{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9cf490;
+  border-radius: 50px;
+  padding-bottom: 3px;
+  padding-left: 1px;
+  margin-right: 10px;
+  gap: 10px;
 }
